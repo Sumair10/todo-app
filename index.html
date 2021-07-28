@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="main">
@@ -14,9 +15,12 @@
         <div class="enter">
           <div class="alert alert-danger" role="alert" style="display: none;" id="alertInput"></div>
           <div class="alert alert-primary" role="alert" style="display: none;" id="alertSuccess"></div>
+          <div class="title" >
+            <h1>Todo Application</h1>
+          </div>
             <form class="row g-3" id="myForm">
                 <div class="col-3"></div>
-                <div class="col-6">
+                <div class="col-md-6">
                   <label for="inputAddress" class="form-label">Enter Todo Title</label>
                   <input type="text" class="form-control" id="inputTodo">
                   <input type="hidden" name="" id="saveIndex">
@@ -31,17 +35,18 @@
                 </div>
                 <div class="col-3"></div>
                 <div class="col-3"></div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <label for="inputCity" class="form-label">Start Date</label>
                     <input type="text" class="form-control" id="inputDate">
                 </div>
                 <div class="col-3"></div>
-                <div class="col-5"></div>
-                <div class="col-6">
+                <div class="col-3"></div>
+                <div class="col-md-6" id="buttons">
                   <button type="button" class="btn btn-primary" id="addTodo">Add Todo</button>
                   <button type="button" class="btn btn-primary" id="saveTodo" style="display: none;">Save Todo</button>
                   <button type="button" class="btn btn-primary" id="deleteAll">Delete All</button>
                 </div>
+                <div class="col-3"></div>
               </form>
         </div>
         <div class="todoItems" id="todoItems">

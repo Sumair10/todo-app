@@ -12,8 +12,8 @@ function saveTodoo()
     todoObj ={
         Id : Date.now(),
         InputTodo : inputTodo.value,
-        InputDescription : inputDescription.value,
-        InputDate : inputDate.value
+        InputDescription : "DESCRIPTION : "+ inputDescription.value,
+        InputDate : "DATE : " +inputDate.value
     }
     if(todoObj.InputTodo.trim() !=0 && todoObj.InputDescription.trim() !=0 && todoObj.InputDate.trim() !=0)
     {
@@ -44,7 +44,7 @@ function saveTodoo()
     }
     else
     {
-        if(todoObj.InputTodo.trim() == 0 || todoObj.InputDescription.trim() ==0 || todoObj.InputDate.trim() ==0)
+        if(todoObj.InputTodo.trim() == 0)
         {
             var alertInput = document.getElementById("alertInput")
             alertInput.style.display = "block"
@@ -71,7 +71,7 @@ function makeCustomCard()
 
     todoArray.forEach(function(todo , index)
     {
-        html += `<div class="card" id=card${index+1} style="width: 18rem; ">
+        html += `<div class="card" id=card${index+1} style="width: 18.5rem; ">
                     <div class="card-body" id="cardBody">
                     <h5 class="card-title">${todo.InputTodo}</h5> <hr>
                     <img src="icon/2044283_cross_cancel_x_icon.png" alt="" width="50" height="50" id="deleteTodo" onclick = "deleteTodo(${index})"> 
@@ -104,7 +104,7 @@ function editTodo(index)
     inputDate.value = todoArray[index].InputDate
 
     addTodo.style.display ="none"
-    saveTodo.style.display=  "block"
+    saveTodo.style.display=  "inline-block"
 
     
 }
@@ -120,7 +120,7 @@ saveTodo.addEventListener('click' , function()
     var saveIndex = document.getElementById("saveIndex").value
 
     saveTodo.style.display = "none"
-    addTodo.style.display = "block"
+    addTodo.style.display = "inline-block"
 
     todoArray[saveIndex].InputTodo = inputTodo.value
     todoArray[saveIndex].InputDescription = inputDescription.value
@@ -181,7 +181,7 @@ deleteAll.addEventListener('click' , function()
         todoArray =[]
     }
     saveTodo.style.display = "none"
-    addTodo.style.display = "block"
+    addTodo.style.display = "inline-block"
     inputTodo.value = ''
     inputDescription.value =''
     inputDate.value =''
