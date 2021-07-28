@@ -1,0 +1,80 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+input{
+    width:100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.main{
+    /* background: linear-gradient(to right, #d31027, #ea384d); */
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    min-height: 100vh;
+}
+.todoItems{
+   display: inline-flex;
+   flex-wrap: wrap;
+}
+.todoItems .card{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    width: 295px;
+    /* color: white; */
+
+}
+.card-body .buttons{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 15px;
+}
+
+
+.btn{
+    width: 80px;
+    background-color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: yellow; */
+}
+.btn-primary{margin-left: 10px;}
+/* //////////////////////////form///////////////////////// */
+.enter{
+    padding: 50px;
+    color: white;
+}
+.enter button{
+    width: 200px;
+    margin-top: 20px;
+}
+.enter label{
+    font-size: 20px;
+}
+
+#deleteTodo{
+    transition: 0.5s;
+}
+#deleteTodo:hover{
+    background-color: rgb(173, 6, 6);
+    transition: 0.5s;
+}
+.mystyle{
+    background-color: tomato;
+
+}
