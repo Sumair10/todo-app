@@ -7,6 +7,14 @@
     box-sizing: border-box;
     font-family: 'Merienda', cursive;
 }
+
+.alert-danger, .alert-primary{
+    position: fixed !important;
+    top: 5px; 
+    left:2%;
+    width: 96%;
+}
+
 input{
     width:100%;
   padding: 10px 20px;

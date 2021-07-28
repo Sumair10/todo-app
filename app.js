@@ -12,8 +12,8 @@ function saveTodoo()
     todoObj ={
         Id : Date.now(),
         InputTodo : inputTodo.value,
-        InputDescription : "DESCRIPTION : "+ inputDescription.value,
-        InputDate : "DATE : " +inputDate.value
+        InputDescription :  inputDescription.value,
+        InputDate : inputDate.value
     }
     if(todoObj.InputTodo.trim() !=0 && todoObj.InputDescription.trim() !=0 && todoObj.InputDate.trim() !=0)
     {
@@ -39,7 +39,7 @@ function saveTodoo()
 
         setTimeout(function(){
         alertSuccess.style.display="none"
-        }, 3000)
+        }, 2000)
         
     }
     else
@@ -49,6 +49,9 @@ function saveTodoo()
             var alertInput = document.getElementById("alertInput")
             alertInput.style.display = "block"
             alertInput.innerText = "Please fil all fields"
+            setTimeout(function(){
+                alertInput.style.display="none"
+            }, 2000)
         }
     }
     
@@ -75,8 +78,8 @@ function makeCustomCard()
                     <div class="card-body" id="cardBody">
                     <h5 class="card-title">${todo.InputTodo}</h5> <hr>
                     <img src="icon/2044283_cross_cancel_x_icon.png" alt="" width="50" height="50" id="deleteTodo" onclick = "deleteTodo(${index})"> 
-                    <p class="card-text">${todo.InputDescription}</p> <hr>
-                    <p>${todo.InputDate}</p> <hr>
+                    <p class="card-text">"DESCRIPTION : " +${todo.InputDescription}</p> <hr>
+                    <p>"DATE : " +${todo.InputDate}</p> <hr>
                     <div class="buttons">
                         <a href="#" class="btn btn-primary" id="doneBtn" onclick="doneTodo(${index})">Done</a>
                         <a href="#" class="btn btn-primary" id="editBtn" onclick="editTodo(${index})">Edit</a>
@@ -137,7 +140,7 @@ saveTodo.addEventListener('click' , function()
 
     setTimeout(function(){
     alertSuccess.style.display="none"
-    }, 3000)
+    }, 2000)
 
 })
 
@@ -158,7 +161,7 @@ function deleteTodo(index)
 
     setTimeout(function(){
     alertSuccess.style.display="none"
-    }, 3000)
+    }, 2000)
 }
 
 // Delete All
